@@ -1,10 +1,10 @@
 Themen:
-username;thema
-andreasfrena;Gradle
-overcone;Mediawiki
-maifel;Bonita BPM
-Migsi;Sourceforge
-FlorianVerant;Jira
-GiulioVattai;Apache
-Noseelefant;CFEngine
-Zillolo;IRC
+username,thema
+andreasfrena,Gradle
+overcone,Mediawiki
+maifel,Bonita BPM
+Migsi,Sourceforge
+FlorianVerant,Jira
+GiulioVattai,Apache
+Noseelefant,CFEngine
+Zillolo,IRC
