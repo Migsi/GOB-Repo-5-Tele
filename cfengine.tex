@@ -2,5 +2,25 @@
 
 \begin{document}
 \title{CFEngine}
-\section{?}
+\section{Was ist CFEngine?}
+CFEngine ist ein System, welches weltweit zur Konfiguration von Netzwerken und Verwaltung von PC's eingesetzt wird. Es kann einzelne Rechner unabhängig vom Betriebssystem nach bestimmten Vorgaben konfigurieren. Die Idee für dieses Programm hatte Mark Burgess im Jahre 1993, welcher es am Oslo University College entwickelte. Die damals noch gängige Methode der Konfiguration von Rechnern mittels Shell-Skripts wurde mit wachsenden Systemen zunehmend umständlicher und komplexer, was den Bedarf nach einer unabhängigen Sprache für die Konfiguration großer, hochkomplexer Systeme weckte.
+\section{Wie funktioniert CFEngine?}
+CFEngine überbrückt Kompatibilitätsprobleme zwischen verschiedenen Betriebssystemen, wobei vor allem die Unterschiedlichen Varianten der UNIX-Systeme nunmehr mit einer systemübergreifenden, selbsterklärenden Sprache konfigurierbar sein sollten. Die Besonderheit dieses Systemes ist die Art der Konfiguration. Der Administrator schreibt kein Skript mit nacheinander auszuführenden Aufgaben, sondern beschreibt in einem Skript den Endzustand, welchen das Netzwerk, die Rechner oder Server erreichen sollen. CFEngine erledigt automatisch die benötigten Schritte um die erforderte Konfiguration zu erreichen. Für die effiziente Abarbeitung der einzelnen Konfigurationsschritte wird jeder Schritt als einzelne atomare Klasse gesehen, was der KI des Systems erlaubt, diese Schritte nach belieben zusammenzusetzen und somit einen sehr hohen Grad an Flexibilität erlaubt.
+Durch dieses Prinzip ist die Konfiguration von Rechnern weitaus sicherer, da der Endzustand des Rechners sicher erreicht wird. CFEngine erkennt zudem auftretende Fehler, bietet die Möglichkeit, Elemente des Netzes auf ihre Funktionalität zu testen. Selbst normale User im Netzerk können CFEngine verwenden, um ihr System aufgeräumt und sauber zu halten, sowie die Zugriffsrechte von Dateien zu verwalten.
+Die Software selbst läuft dabei auf jeden einzelnen Rechner im Netz und liest die vom Administrator erstellte Konfigurationsdatei aus, in der der Zustand jedes Elements im Netzwerk definiert ist. Anschließend führt die Software alle nötigen Konfigurationen aus, bis der Rechner auf dem sie läuft genau dem Zustand entspricht, nach dem er in der Konfigurationsdatei beschrieben wurde. Dadurch entfällt die manuelle Neukonfiguration eines Rechners zum Beispiel bei einer defekten Festplatte, die gesamte Konfiguration wird einfach von CFEngine innerhalb weniger Minuten wiedereingerichtet, selbst beim Wechsel des Betriebssystems.
+Die gesamte Software ist in der Programmiersprache C geschrieben, was einen sehr effizienten Umgang mit den zur Verfügung stehenden Ressourcen ermöglicht.
+\section{Elementare Funktionen}
+\begin{list}
+	\item Konfiguration der Netzwerkschnittstelle
+	\item Textdateien bearbeiten
+	\item Erstellen und verwalten von Verknüpfungen
+	\item Verwaltung von Zugriffsrechten von Dateien
+	\item Sauberhalten des Systems, Löschen von überflüssigen Dateien
+	\item Verwaltung von Dateisystemen der Benutzer
+	\item Ausführen von Scripts sowohl von seiten des Benutzers als auch des Administrators
+\end{list}
+\section{Anwendungsbereiche}
+CFEngine wird heutzutage von weltweit bekannten Betrieben verwendet, der bekannteste ist sicher Intel. Daneben verwendet auch Samsung und die deutsche Telekom CFEngine zur Verwaltung ihrer Rechner- und Serversysteme. Auch kleine Betriebe können von der Verwendung von CFEngine profitieren, selbst auf einem einzelnen Rechner kann zum Beispiel die Säuberungsfunktion von unbenutzten Dateien große Vorteile bringen.
+\section{Lizenz}
+CFEngine ist derzeit in der Version 3.6 auf dem Markt und unter der GNU General Public Licence veröffentlicht worden.
 \end{document}
