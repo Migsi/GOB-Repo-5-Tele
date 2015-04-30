@@ -10,7 +10,7 @@ Durch dieses Prinzip ist die Konfiguration von Rechnern weitaus sicherer, da der
 Die Software selbst läuft dabei auf jeden einzelnen Rechner im Netz und liest die vom Administrator erstellte Konfigurationsdatei aus, in der der Zustand jedes Elements im Netzwerk definiert ist. Anschließend führt die Software alle nötigen Konfigurationen aus, bis der Rechner auf dem sie läuft genau dem Zustand entspricht, nach dem er in der Konfigurationsdatei beschrieben wurde. Dadurch entfällt die manuelle Neukonfiguration eines Rechners zum Beispiel bei einer defekten Festplatte, die gesamte Konfiguration wird einfach von CFEngine innerhalb weniger Minuten wiedereingerichtet, selbst beim Wechsel des Betriebssystems.
 Die gesamte Software ist in der Programmiersprache C geschrieben, was einen sehr effizienten Umgang mit den zur Verfügung stehenden Ressourcen ermöglicht.
 \section{Elementare Funktionen}
-\begin{list}
+\begin{itemize}
 	\item Konfiguration der Netzwerkschnittstelle
 	\item Textdateien bearbeiten
 	\item Erstellen und verwalten von Verknüpfungen
@@ -18,7 +18,7 @@ Die gesamte Software ist in der Programmiersprache C geschrieben, was einen sehr
 	\item Sauberhalten des Systems, Löschen von überflüssigen Dateien
 	\item Verwaltung von Dateisystemen der Benutzer
 	\item Ausführen von Scripts sowohl von seiten des Benutzers als auch des Administrators
-\end{list}
+\end{itemize}
 \section{Anwendungsbereiche}
 CFEngine wird heutzutage von weltweit bekannten Betrieben verwendet, der bekannteste ist sicher Intel. Daneben verwendet auch Samsung und die deutsche Telekom CFEngine zur Verwaltung ihrer Rechner- und Serversysteme. Auch kleine Betriebe können von der Verwendung von CFEngine profitieren, selbst auf einem einzelnen Rechner kann zum Beispiel die Säuberungsfunktion von unbenutzten Dateien große Vorteile bringen.
 \section{Lizenz}
