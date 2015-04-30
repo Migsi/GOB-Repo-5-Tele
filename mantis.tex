@@ -1,0 +1,48 @@
+\section{Mantis}
+Mantis ist eine freie Software, welche zur Auffindung von Bugs im eigenem
+Projekt dient. Mithilfe von Mantis kann man Programmfehler Verfolgen und
+Verwalten.
+\section{Geschichte}
+Kenzaburo IT fing im Jahre 2000 mit der Entwicklung des Programms an.
+Im Jahre 2002 wurde Victor Boctor Projektleiter. Die erste Version (1.0.0)
+wurde im Februar 2006 ver ̈offentlicht. Die darauffolgende Version 1.1.0 wur-
+de dann im Dezember 2007 herausgegeben. Im November des Jahres 2008
+wurde nach langen Diskussionen von Subversion Revision Control zu Git
+gewechselt. Zwei Jahre später kam die Version 1.2.0 heraus. Im Juli 2012
+wurde die MantisBT Organisation auf GitHub zum offiziellen Repository
+für den Source Code des Projektes.
+\section{Funktionsweise}
+Mantis basiert auf PHP und benotigt einen Webserver. Der Benutzer be-
+dient Mantis über eine HTML-Oberflache. Eine Datenbank (MySQL, MS
+SQL oder PostgreSQL) wird verwendet, um die Eintr ̈age zu verwalten. Man-
+tis ist unter Linux, Mac OS X, Windows, OS/2 und Unix lauffahig. Es ist
+über die Konfigurationsdatei config inc.php weitgehend konfigurierbar. Be-
+nutzerbezogene Einstellungen k ̈onnen über die Web-Oberfl ̈ache vorgenom-
+men werden. Um über externe Software Zugriff auf die Inhalte des MantisBT
+zu haben, entwickelten sich im Laufe der Jahre verschiedene Schnittstellen,
+welche den Zugriff über die, von Mantis bereitgestellten, SOAP-Webservices
+vereinfachen. Einer der bekanntesten Vertreter ist das freie Projekt Man-
+tisConnect, welches sowohl eine Java als auch eine .NET Bibliothek zur
+Verfügung stellt.
+\section{Methodik}
+In Mantis können verschiedene Projekte angelegt werden. Auch eine Unter-
+gliederung in Unterprojekte ist moglich. Den Projekten werden Projektteil-
+nehmer mit unterschiedlichen Zugriffsrechten zugeteilt. Die Zugriffsrechte
+sind ebenenbasiert: höhere Zugriffsebenen (z. B. Entwickler) schließen die
+Rechte niedrigerer Ebenen (z. B. Reporter) ein. Insgesamt gibt es sechs
+vorgegebene Zugriffsebenen (Betrachter, Reporter, Tester, Entwickler, Ma-
+nager, Administrator). Hat jemand mindestens Reporter-Status innerhalb
+eines Projekts, kann er einen Problembericht (Issue) anlegen. Gegebenen-
+falls kann dieser Bericht sofort einem Bearbeiter (= Projektteilnehmer mit
+mindestens Entwickler-Status) zugeordnet werden. Jeder Problembericht be-
+findet sich in einem von mehreren vom eingebauten Arbeitsablauf vorgege-
+1benen Zuständen (z. B. Neu, Zugewiesen, Behoben, Geschlossen). Für Zu-
+standsänderungen bedarf es wiederum entsprechender Zugriffsrechte. Wahrend
+des Lebenszyklus eines Fehlerberichts können von allen berechtigten Pro-
+jektteilnehmern zu jedem Zeitpunkt Kommentare zum Bericht hinzugefügt
+werden. Das System bietet bei Zustandswechseln ebenfalls eine Kommentar-
+funktion an, sodass der Lebenszyklus eines Berichts nachvollzogen werden
+kann.
+
+
+
