@@ -1,0 +1,17 @@
+Formatierung:
+1 \section pro Thema, intern sub, subsubsections
+
+Fehler:
++ Neue Zeile mit Leerzeile!
+Das \\ 
+nur am Zeilenende verwenden, nicht in leerer Zeile, sonst Fehler. Aber vermeidet es einfach. 99% macht man mit Leerzeile!
+
++ Das Zeichen " wird, wenn man wie hier ngerman verwendet für einen Befehl gebraucht und funktioniert NICHT wie gewollt.
+Für Gänsefüßchen ``blahblah''  verwenden!
+
++ Umlaute mit ngerman: "u, "U, "a, "A .... "s für ß.
++ Achtung, es funktionieren auch (manchmal!) die geschriebenen Umlaute äüö. Aber es gibt vielerlei Probleme beim Öffnen von solchen Texten in verschiedenen Systemen. Diese werden dann auch falsch kompiliert!
+
+
+
+TeX-Editoren z.B.: TeXNicCenter für Windows, Kile für Linux, TeXShop für Mac
