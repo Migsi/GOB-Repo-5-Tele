@@ -1,83 +1,40 @@
 
-\begin{center}
-\textbf{\LARGE{Apache}}
-\end{center}
 
 
-\section{Einleitung}
-Apache ist ein Open-Source HTTP Server und freies Produkt der Apache Software Foundation, er ist heutzutage der meist benutzte HTTP Server  im Internet.
 
-\section{Geschichte}
-Apache wurde 1995 von einer Gruppe von acht Entwickler veröffentlicht, diese hatten als Aufgabe die Weiterentwicklung des  Webservers NCSA HTTPd. Die bedeutendsten dieser Entwickler waren Brian Behlendorf und Roy T. Fielding.
-Der Name Apache stammt aus dem Nordamerikanische Indianerstamm Apachen. Eine falsche Interpretation ist,dass der Name eine Umdeutung von „a patchy server“ sei, was so viel wie "zusammengeflickter Server" heißt, diese Deutung entstand dadurch das der Apache eine gepatchte erweiterung des alten Webservers NCSA HTTPd.
-
-\section{Distributionen}
-Der Apache Server ist standardmäßig auf jeder Linux-Distribution enthalten, für Windows kann man die Entwicklungs-Distribution XAMPP installieren. Die für den Apache-Webserver genutzte Architektur unterscheidet sich in der 
-Version 1.3 stark zwischen den Unix-Versionen und der Version des Apache-
-Webservers für die Windows-Plattform.
-
-\section{Erweiterungen}
-Der Apache Server kann mit sogenannte "Module" erweitert werden um benutzerspezifische
-Anforderungen zu erfüllen die bekanntesten module sind: 
+Die Apache Software Foundation ist eine non-Profit Organisation,eingetragen in den Vereinigten Staaten von Amerika, welche an viele verschieden Projekte fÃ¼r die GemeinnÃ¼tzigkeit arbeitet. Die Foundation wurde 1911 gegrÃ¼ndet und hat seid dem die folgenden Aufgaben:
 \begin{itemize}
-\item{SSL}
-\item{Einbindung von PHP5 oder python}
-\item{Weiterleitung an Proxy-Servern}
-\item{Automatische Erzeugung von Statusberichten}
+\item{Eine Grundlage fÃ¼r offene, kollaborative Software-Entwicklungsprojekte zu schaffen und diese mit Hardware,Kommunikation und Infrastrukturen zu versorgen. }
+\item{Eine eigenen stÃ¤ndige juristische EntitÃ¤t zu schaffen, in der Unternehmen und Einzelpersonen spenden kÃ¶nnen,und sich sicher sein kÃ¶nnen, dass diese Ressourcen fÃ¼r das Gemeinwohl eingesetzt werden.}
+\item{die 'Apache' Marke zu schÃ¼tzen}
+\end{itemize}
+Im Gegensatz zu andere Opensource-Projekte wurde der Apache Webserver nicht nur von einem Entwickler gestartet(zum Beispiel bei Linux der Kernel),sondern begann als eine vielfÃ¤ltige Gruppe,die gemeinsame Interessen teilten und sich durch den Austausch von  von Informationen, Korrekturen und Anregungen kennen lernten.
+Als die Gruppe begann, ihre eigene Version der Software zu entwickeln, wurden immer mehr Menschen angezogen und begannen zu helfen indem sie zuerst Anregungen oder kleine Patches teilten, spÃ¤ter dann mit wichtigeren BeitrÃ¤gen. \\
+Apache nannte dieses Grundprinzip "Leistungsgesellschaft": wortwÃ¶rtlich Regierung durch Verdienst.\\
+Als der Apache Server grÃ¶ÃŸer und grÃ¶ÃŸer wurde aufgrund der offenen Gemeinheit hinter dem Projekt, begannen die Menschen Satelliten-Projekte an oder arbeiteten an denen und verbreiteten die selber Prinzipien auch in denen. Als dann die Apache Software Fondation gegrÃ¼ndet worden ist gab es eine sehr groÃŸe Anzahl an verschiedenen Projekten. Um die Vielfalt zu bewahren entschloss man sich das gesamte nicht Zentral zu regeln, sondern jedes Projekt ist die AutoritÃ¤t Ã¼ber die Entwicklung seiner Software und hat so ein hohes MaÃŸ an Freiheit bei der Gestaltung ihrer eigenen Regeln. \\
+ \newpage 
+Die Fondation bekam trotzdem ihre Leitung. Folgende EntitÃ¤ten wurden erschafft:
+\begin{itemize}
+\item{Der Verwaltungsrat (Board of Directors ) leitet die Foundation und besteht aus Mitgliedern}
+\item{Die Projekt Management Committees (PMC) , diese regeln die Projekte}
 \end{itemize}
 
-
-
-\newpage
-
-
-
-\section{Funktionsweiße}
-Um die Funktionsweise des Apache-Webservers zu veranschaulichen, bietet es 
-sich an, die Abarbeitung in verschiedene Stufen zu unterteilen.
-\begin{description}
-
-\item{Übersetzung der URL in einen Dateinamen\\  Hier wird aus der vom 
-Webclient angeforderten URL der entsprechende Dateiname im Filesystem 
-des Webservers generiert.}
-
-\item{Überprüfung der Authentisierung \\ Hier findet die Überprüfung eventuell 
-vom Benutzer übergebener Datei beziehungsweise Datenbank statt}
-
-\item{Prüfung der Zugriffsberechtigungen \\Hier wird überprüft, ob ausreichende 
-Zugriffsrechte für den Zugriff auf die angeforderte Ressource durch den jeweiligen Client bestehen}
-
-\item{Bestimmung des MIME-Typs des jeweiligen Dateinamen \\IME-Typ bestimmt unter anderem auch die Art und Weise, wie der Apache-Webserver einen Request weiter 
-bearbeitet.  }
-
-\item{Erstellen und Senden der Antwort an den Webclient \\ das Erstellen der 
-Antwort an den Webclient hängt von einer Vielzahl von Faktoren 
-ab. Zu nennen wären dabei die Art des HTTP-Requests, der MIME-Typ, der Datei, auf die die URL abgebildet wird, die Konfiguration des Apache-Webservers und anderes mehr.}
-
-
-\item{Loggen des Requests \\ Die Bearbeitung eingehender Requests geschieht anhand des sogenannten Handlers. Ein Handler ist die Darstellung der Vorgänge die zur Erstellung der Antwort auf einen Request abgearbeitet werden. }
-\end{description}
-Die Standard-Distribution des Apache-Webservers enthält mehrere Handler unter anderem dem default-Handler. Allerdings gibt es die Möglichkeit für den Benutzer eigene Handler und so mit eigene Vorgänge zu definieren.
-
-\newpage
-
-
-\section{Sicherheitsaspekte}
-
-\subsection{Konfiguration}
-Die genaue Konfiguration des Apache Servers ist ein wesentlicher Punkt der zur Sicherheit des Systems beitragen kann. Der Apache Server ließt aus drei Dateien:
+Apache stÃ¼tzt sich groÃŸteils auf  freiwillige Helfer und Entwickler, die Community spielt daher eine wesentliche Rolle in der Planung, Umsetzung und Realisierung der Projekte, in der Community gibt es verschieden "Rollen" von Benutzer:
 \begin{itemize}
-\item{httpd.conf}
-\item{srm.conf}
-\item{access.conf}
+\item{Die \textbf{USER}: Ein Benutzer ist jemand, der Apache Software verwendet. Benutzer tragen durch RÃ¼ckmeldungen an die Entwickler in Form von Bug-Reports und Feature-VorschlÃ¤ge zu den Projekten bei. Nutzer nehmen an der Apache-Community, indem andere Benutzer helfen teil.}
+\item{Die \textbf{DEVELOPER}: Ein Entwickler ist ein Benutzer, welcher in Form von Code oder Dokumentation zu einem Projekt beitrÃ¤gt. Entwickler nehmen an Diskussionen teil, bieten Patches, VorschlÃ¤ge und Kritik. Entwickler sind auch als  "contributors" bekannt.}
+\item{Die \textbf{COMMITER}:Ein Committer ist ein Entwickler, der Schreibzugriff auf die Code-Repository hat.Commiter haben eine apache.org Mail-Adresse. Dadurch das sie keine weiteren Personen fÃ¼r die Patches brauchen, treffen Commiter meistens kurzfristige Entscheidungen fÃ¼r ein Projekt. Das Projekt Management Commitee kann diese Entscheidungen genehmigen sodass sie permanent bleibt oder sie ablehnen. Die PMC treffen die Entscheidungen nicht die Committer.}
+\item{\textbf{PMC Member}:Ein PMC Member ist ein Entwickler oder ein Committer, der aufgrund seiner auÃŸerordentliche Verdienste fÃ¼r die Entwicklung eines Projekts oder aufgrund seines auÃŸerordentliches  Engagement im Comitee gewÃ¤hlt worden ist. Er hat alle Rechte die Ein Commiter besitzt zudem kann er an Community-verbundene Entscheidungen mitbestimmen und ein aktiven Benutzter als Commiter vorschlagen. Das PCM als ganzes regelt das Projekt }
 \end{itemize}
-Einige der grundlegensten konfigurationen sind:
-\begin{description}
-\item{ServerName \\ Hostname des Webservers}
-\item{DocumentRoot \\ Wurzelverzeichnis der auf diesem Webserver abgelegten 
-Dokumente }
-\item{Deny,Allow \\ Diese Verweigern oder Erlauben den Zugriff entsprechend der IP-Adresse beziehungsweise des Hostnames }
-\end{description} 
+\newpage
+Die Community von Apache folgt den sechs Prinzipien die auch "The Apache Way" bezeichnet werden:
+\begin{itemize}
+\item{kollaborative Software-Entwicklung}
+\item{Handelsfreundliche Standard-Lizenz}
+\item{Konstante Software QualitÃ¤t}
+\item{Respektvoll, ehrlich, technische basierte Interaktion}
+\item{Umsetzung von Standards}
+\item{Sicherheit als Pflicht Funktion}
+\end{itemize}
+Projekte Regeln sich normalerweise von selbst, von freiwilligen Nutzer. Macht deren die tun,dies funktioniert gut fÃ¼r die meisten FÃ¤lle. Wenn Koordinierung erforderlich ist, werden BeschlÃ¼sse durch einer Abstimmung beschlossen.
 
-\subsection{Bekannte Angriffe und Schwachstellen}
-Der bekannteste Angriff auf den Apache-Server ist so wie auf jedem anderen HTTP-Server der DOS-Angriff, DOS bedeutet soviel wie "Denial-of-Service", dabei wird der Server durch der Anzahl der Anfragen, die von einem Angreifer kommen ausgelastet,sodass er nicht mehr auf den anderen Anfragen reagieren kann. Der Server antwortet dann mit dem DOS beziehungsweise mit dem Denial-of-Service Dos-Attacken kann man mit verschiedenen Firewalls regeln unterbinden. Ein Ähnlicher Angriff ist DDOS das bedeutet soviel wie "Distributed Denial of Service", zum Unterschied zu DOS greift bei DDOS der Angreifer nicht nur mit einer Rechner den Server an sondern mit hunderten von Rechner die alle eine andere IP haben an. DDOS-Attacken kann man nicht unterbinden.
