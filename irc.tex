@@ -1,6 +1,7 @@
 % Please enable Umlaute.
 
-\subsection{Internet Relay Chat}
+\section{Internet Relay Chat}
+\subsection{Einführung}
 Als \textbf{Internet Relay Chat} (im Folgenden IRC) bezeichnet man ein rein text-basiertes Chat-System. Es ermöglicht Gespräche zwischen einer beliebigen Anzahl von Teilnehmern, die in sogenannte Kanäle (engl. Channels) eingeteilt werden. Neue Kanäle können meist von jedem Teilnehmer eröffnet werden und ein Teilnehmer kann auch an mehreren Kanälen parallel teilnehmen. Zur Teilnahme an einem Gespräch wird ein IRC-Client benötigt. 
 \\
 Zur Vermittlung dient ein IRC-Netzwerk, welches aus miteinander verbundenen Server (den Relais-Stationen) besteht. 
@@ -8,6 +9,7 @@ IRC basiert auf einer von \textit{BITNET} übernommenen Topologie, welche vorsch
 \\
 Die größten IRC-Netzwerke bestehen aus mehreren Dutzend Servern, welche gleichzeitig über 100.000 Benutzer verbinden, die in mehr als 10.000 Kanälen Gespräche führen können.
 \\
+\subsection{Funktionsweise}
 Beim ursprünglichen IRC kommt ein auf IP/TCP basierendes, textorientiertes Protokoll zum Einsatz.
 Nachrichten im IRC haben folgende Eigenschaften:
 \begin{itemize}
@@ -18,6 +20,18 @@ Nachrichten im IRC haben folgende Eigenschaften:
 \end{itemize}
 IRC kann sowohl unverschlüsselt, als auch über eine SSL/TLS-verschlüsselte Verbindung benutzt werden. Clientseitig ist es oftmals möglich Nachrichten zu verschlüsseln. Eine Möglichkeit zur Verschlüsselung bietet \textbf{FiSH}, welches mit Hilfe eines symmetrischen Kryptosystems einen Kanal verschlüsseln kann. Weiterhin können auch Gespräche zwischen zwei Nutzern durch ein Asymmetrisches Kryptosystem, auf Basis eines Diffie-Hellmann-Schlüsselaustauschs abgesichert werden.
 \\
+URL Schemas für IRC sind wie folgt aufgebaut:
+\begin{quote}
+\verb|irc://<host>[:<port>]/[<channel>[?<channel_keyword]]|
+\end{quote}
+Moderne IRC-Systeme unterstützen eine Vielzahl an Features, die im originalen IRC-Protokoll nicht vorgesehen waren.
+\begin{itemize}
+\item Services die von einem Bot bereitgestellt werden, wie zum Beispiel Nickname-Registrierung.
+\item Proxy-Erkennung, um unsichere Proxy-Verbindungen zu erkennen und zu blocken.
+\item Zusätzliche Kommandos, welche mit den Services Hand in Hand gehen.
+\item Verschlüsselung. Zwischen Client und Server wird meist SSL genutzt, während von Client zu CLient meist Secure DCC zum Einsatz kommt.
+\end{itemize}
+\subsection{Aktive Netzwerke}
 Es gibt tausende IRC-Netzwerke die zur Zeit aktiv sind. Die größten IRC-Netzwerke waren zum Höhepunkt der IRC-Nutzung:
 \begin{itemize}
 \item EFnet
@@ -34,14 +48,4 @@ Im März 2015 waren die größten Netzwerke folgende:
 \item Undernet - 25k Users
 \item rizon - 25k Users
 \end{itemize}
-URL Schemas für IRC sind wie folgt aufgebaut:
-\begin{quote}
-\verb|irc://<host>[:<port>]/[<channel>[?<channel_keyword]]|
-\end{quote}
-Moderne IRC-Systeme unterstützen eine Vielzahl an Features, die im originalen IRC-Protokoll nicht vorgesehen waren.
-\begin{itemize}
-\item Services die von einem Bot bereitgestellt werden, wie zum Beispiel Nickname-Registrierung.
-\item Proxy-Erkennung, um unsichere Proxy-Verbindungen zu erkennen und zu blocken.
-\item Zusätzliche Kommandos, welche mit den Services Hand in Hand gehen.
-\item Verschlüsselung. Zwischen Client und Server wird meist SSL genutzt, während von Client zu CLient meist Secure DCC zum Einsatz kommt.
-\end{itemize}
+
