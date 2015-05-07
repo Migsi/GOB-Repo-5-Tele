@@ -1,0 +1,40 @@
+\section{Gradle}
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics{./gradle_logo.png}
+		\caption{Das Gradle Logo}
+		\label{fig:gradle_logo}
+	\end{center}
+\end{figure}
+Gradle ist ein Build-Management-Tool, welches auf Java basiert und mit Ant und Maven von Apache vergleichbar ist, das für Builds  von Sofwaresystemen entwickelt wurde, welche aus vielen Projekten bestehen. Für die Beschreibung der zu bauenden Projekte wird dabei eine auf Groovy basierende DSL (\textit{domain specific language}) verwendet. Ein Gradle-Skript ist direkt ausführbarer Code und stellt immer ein Groovy-Skript dar. Bei Gradle wurde versucht, das \textit{\textquotedblleft build-by-convention\textquotedblright}-Prinzip von Maven und die Flexibilität von Ant zu vereinen.
+\\
+Da die Builds rießiger Projekte sehr viel Zeit in Anspruch nehmen. Erlaubt Gradle inkrementelles, sowie auch paralleles Bauen der Software. Inkrementelles Bauen bedeutet dabei, dass immer nur geänderte Teile des Projektes neu gebaut werden, paralleles Bauen, dass zum Beispiel Tests parallel auf verschiedenen CPU's ausgeführt werden. Der Build-Prozesses kann somit wesentlich schneller ablaufen.
+\\
+Gradle bietet auch Plug-ins für IDE's wie zum Beispiel für NetBeans, IntelliJ IDEA und Eclipse.
+\subsection{Konzept und Architektur}
+Gradle übernimmt in vielen hinsichten die Konzepte von Maven. Diese wären:
+\begin{itemize}
+	\item Die Standartkonventionen für das Verzeichnislayout der Projektquelle
+	\item Die Phasen für den Bau eines Projekts
+	\item Das Management der Abhängigkeiten eines Projekts mit anderen Projekten oder Fremdbibliotheken
+\end{itemize}
+Ebenso ähnelt die Architektur von Gradle der von Maven. Es besteht aus einem abstrakten Kern und einer Vielzahl an Plug-ins. Gradle ist damit vielfältig erweiterbar und ermöglicht das Bewerkstelligen von Buildprozessen für beliebige Software-Platformen. Dabei werden von Haus aus die Plug-ins für das Bauen von Java, Groovy, Scala und C++ Projekten mitgeliefert.
+\subsection{Gradle DSL}
+Zum Unterschied von Maven und dessen XML-Deklarationen arbeitet der Anwender mit Gradles Domänenspezifischer Sprache, welche er erweitern oder in den Standardeigenschaften ändern kann, da eine Gradle-Build-Datei immer ein Groovy-Skript darstellt. Ebenso ist es möglich eigene Build-Änderungen zu schreiben oder vordefinierte Standards zu überschreiben und dem eigenen Belangen anzupassen. Der Gradle-Anwender kann dabei zwei Stile verwenden:
+\begin{itemize}
+	\item Deklarativ: auf Standardkonventionen beruhenden Ansatz von Maven 
+	\item Imperativ: Ansatz von Ant, bei dem der Anwender aber auch alles im Detail definieren muss
+\end{itemize}
+
+Auf Grund der DSL ist man nicht gezwungen, zuerst Groovy zu lernen, bevor man mit Gradle-Build-Skripten arbeitet.
+\subsection{Der Gradle-Build}
+Der Gradle-Build ist in zwei Hauptphasen aufgeteilt, in die Konfiguration und die Ausführung. In der Konfiguration wird die gesamt Build-Definition durchlaufen und ein sogenannter Abhängigkeitsgraph (DAG) erstellt. Dieser DAG enthält die Reihenfolge aller abzuarbeitenden Schritte. Bei der Ausführung wird dieser Graph für die gewünschten Tasks dann durchlaufen. Beide Teile sind über eine offene API zugänglich.
+\\
+Die Tasks des Buildprozess, welcher vom DAG beschrieben wird, hängen hierachisch voneineander ab. Das heißt ein Task kann nur ausgeführt werden, wenn alle seine Vorgänger erfolgreich abgeschlossen wurden.
+\\
+Gradle nutzt für einen einfachen Build hauptsächliche drei benutzerdefinierte Dateien:
+\begin{itemize}
+	\item \textit{build.gradle} – die auf der Gradle-DSL beruhende Definition des Builds mit allen Tasks und Abhängigkeiten eines Projekts (ein Multiprojekt hat pro Projekt eine solche Build-Datei, die durch Vererbung der Eigenschaften von ihrem „Vater“-Buildskript kurz gehalten werden können).
+    \item \textit{settings.gradle (optional)} – bei einem Multiprojekt werden hier die teilnehmenden Unterprojekte festgelegt.
+    \item \textit{gradle.properties (optional)} – eine Liste von Properties, die für die projektspezifische Gradle-Initialisierung eines Builds gültig sind.
+\end{itemize}
