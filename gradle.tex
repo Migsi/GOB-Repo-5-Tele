@@ -6,10 +6,11 @@
 		\label{fig:gradle_logo}
 	\end{center}
 \end{figure}
-Gradle ist ein Build-Management-Tool, welches auf Java basiert und mit Ant und Maven von Apache vergleichbar ist, das f"ur Builds  von Sofwaresystemen entwickelt wurde, welche aus vielen Projekten bestehen.
+Gradle ist ein Build-Management-Tool, welches auf Java basiert und mit Ant und Maven von Apache vergleichbar ist. Es wurde f"ur Builds  von Sofwaresystemen entwickelt, welche aus vielen Projekten bestehen.
 F"ur die Beschreibung der zu bauenden Projekte wird dabei eine auf Groovy basierende DSL (\textit{domain specific language}) verwendet.
-Ein Gradle-Skript ist direkt ausf"uhrbarer Code und stellt immerein Groovy-Skript dar.
+Ein Gradle-Skript ist direkt ausf"uhrbarer Code und stellt immer ein Groovy-Skript dar.
 Bei Gradle wurde versucht, das \textit{``build-by-convention''}-Prinzip von Maven und die Flexibilit"at von Ant zu vereinen.
+Gradle ist mit der Apache-Lizenz 2.0 lizensiert.
 
 Da die Builds rie"siger Projekte sehr viel Zeit in Anspruch nehmen, erlaubt Gradle inkrementelles, sowie auch paralleles Bauen der Software.
 Inkrementelles Bauen bedeutet dabei, dass immer nur ge"anderte Teile des Projektes neu gebaut werden, paralleles Bauen, dass zum Beispiel Tests parallel auf verschiedenen CPU's ausgef"uhrt werden.
@@ -48,7 +49,7 @@ Die Tasks des Buildprozess, welcher vom DAG beschrieben wird, h"angen hierachisc
 
 Gradle nutzt f"ur einen einfachen Build haupts"achlich drei benutzerdefinierte Dateien:
 \begin{itemize}
-	\item \textit{build.gradle} – die auf der Gradle-DSL beruhende Definition des Builds mit allen Tasks und Abh"angigkeiten eines Projekts (ein Multiprojekt hat pro Projekt eine solche Build-Datei, die durch Vererbung der Eigenschaften von ihrem „Vater“-Buildskript kurz gehalten werden k"onnen)
-    \item \textit{settings.gradle (optional)} – bei einem Multiprojekt werden hier die teilnehmenden Unterprojekte festgelegt
-    \item \textit{gradle.properties (optional)} – eine Liste von Properties, die f"ur die projektspezifische Gradle-Initialisierung eines Builds g"ultig sind
+	\item \textit{build.gradle} : die auf der Gradle-DSL beruhende Definition des Builds mit allen Tasks und Abh"angigkeiten eines Projekts (ein Multiprojekt hat pro Projekt eine solche Build-Datei, die durch Vererbung der Eigenschaften von ihrem ``Vater''-Buildskript kurz gehalten werden k"onnen)
+    \item \textit{settings.gradle (optional)} : bei einem Multiprojekt werden hier die teilnehmenden Unterprojekte festgelegt
+    \item \textit{gradle.properties (optional)} : eine Liste von Properties, die f"ur die projektspezifische Gradle-Initialisierung eines Builds g"ultig sind
 \end{itemize}
