@@ -2,10 +2,12 @@
 \usepackage{ngerman}
 \usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
-\usepackage{graphicx} 
+\usepackage{graphicx}
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{colorlinks,linkcolor=blue} 
 
-\title{Projektmanagment und Teamarbeit\thanks{Erstellt 
-im Kurs ``Projektmanagment und Betriebsorganisation'', Klasse 5Tele, TFO Bozen, Mai 2015}}
+\title{Projektmanagment und Teamarbeit\\Klasse 5Tele TFO Bozen\thanks{Erstellt 
+im Kurs ``Projektmanagment und Betriebsorganisation'', TFO Bozen, Mai 2015}}
 
 \author{Amplatz Diego
 \and	Egger Alex
@@ -34,17 +36,17 @@ im Kurs ``Projektmanagment und Betriebsorganisation'', Klasse 5Tele, TFO Bozen, 
 \begin{sloppypar}
 \tableofcontents
 
-\input{gradle.tex}
-\input{mediawiki.tex}
-\input{bonita.tex}
-\input{sourceforge.tex}
-\input{jira.tex}
-\input{apache.tex}
-\input{cfengine.tex}
-\input{irc.tex}
-\input{mantis.tex}
-\input{dokuwiki.tex}
-\input{odoo.tex}
+\include{gradle}
+\include{mediawiki}
+\include{bonita}
+\include{sourceforge}
+\include{jira}
+\include{apache}
+\include{cfengine}
+\include{irc}
+\include{mantis}
+\include{dokuwiki}
+\include{odoo}
 
 \end{sloppypar}
 \end{document} 
