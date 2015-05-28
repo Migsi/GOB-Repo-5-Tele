@@ -5,14 +5,18 @@ Jira wurde erstmals 2002 von der australischen Softwarefirma Atlassian Inc. auf 
 \subsection{Funktionsweise}
 Jira ist eine webbasierte Anwendung zur Fehlerverwaltung, Problembehandlung und Projektmanagement. Sie basiert auf einer Java Servlet Plattform und l"auft auf verschiedenen Datenbanken und Betriebssystemen. Jira wird vom Nutzer mit sogenannten Tickets gef"ullt. Diese sind auf verschiedene Arten einsehbar, zum Beispiel Dashboards, Suchfilter, Statistiken oder per E-Mail.
 
+\subsubsection{Tickets}
 Ein Ticket besteht aus einer Projektzuordnung, einer Zusammenfassung, einem Typ, einem Status, einer Priorit"at, einer oder mehreren Kompetenzzuordnungen und einem Inhalt. Des weiteren ist es m"oglich selbst Felder zu definieren und weitere Informationen durch Anh"ange oder Kommentare hinzuzuf"ugen. Der Status gibt Auskunft "uber den momentanen Stand des Tickets. M"ogliche Status sind ToDo, Opened, In Progress, Reopened, Resolved und Closed. Die Tickets k"onnen editiert werden oder den Status wechseln. Welche Statuswechsel dabei m"oglich sind definiert der anpassbare Workflow.
 
+\subsubsection{Workflow}
 Der Workflow in Jira besitzt f"unf Hauptstationen: Open Issue, Resolved Issue, InProgress Issue, ReOpened Issue und Close Issue. Ein erstellter Fehler kann diese Stationen alle durchlaufen, muss aber nicht. 
 Jede "Anderung wird in einem Log festgehalten. Jira besitzt eine gro"se Anzahl an Konfigurationsm"oglichkeiten. So kann f"ur jeden Anwendungszweck eine eigener Tickettyp mit eigenem Workflow, eigenem Status, einer oder mehreren Ansichten, eigenen Feldern und beliebigen Workflow"uberg"angen erstellt werden.
 Es ist m"oglich einen Fehler durch sogenannte Sub-Tasks in kleinere Unteraufgaben aufzuteilen, welche dann einzeln angegangen werden k"onnen. Dies erleichtert die Fehlerbehebung.
 
+\subsubsection{Komponenten}
 Neben den Tickets ist es m"oglich einem Projekt sogenannte Komponenten hinzuzuf"ugen. Diese Unterkategorien helfen das Projekt "ubersichtlich aufzuteilen. So kann zum Beispiel ein Team, Module oder ein Unterprojekt angegeben werden, nach welchen dann unterschieden wird. Mit Hilfe der Komponenten k"onnen leichter Berichte und Statistiken erstellt und auf dem Dashboard dargestellt werden.
- 
+
+\subsubsection{Schemes} 
 Zus"atzlich ist es m"oglich durch sogenannte ``Schemes'' die Zugriffe, das Verhalten von Feldern, die Sichtbarkeit der Tickets und mehr f"ur jedes Projekt individuell festzulegen. Wenn kein Scheme explizit ausgesucht wird, verwendet Jira das Default Issue Type Scheme. Weitere Schemes, welche von Jira selbst angeboten werden, sind das Agile Scrum Issue Type Scheme oder das IT\&Support Scheme. Wie auch die Tickettypen k"onnen auch Schemes selbst erstellt werden.
 
 Die flexible Architektur von Jira erm"oglicht es dem Benutzer Erweiterungen f"ur Jira zu entwickeln und diese "uber den Atlassian Marketplace zur Verf"ugung zu stellen.
